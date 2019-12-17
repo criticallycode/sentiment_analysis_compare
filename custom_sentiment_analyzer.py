@@ -35,12 +35,12 @@ word_features = pickle.load(word_features_file)
 word_features_file.close()
 
 def find_features(document):
-    # remember that the words are the first part of the tuple, with the label being the second part
-    # making a set out of the doct makes it easier to search through, since it reduces it down to
+    # the words are the first part of the tuple, the label being the second part
+    # making a set out of the dict makes it easier to search through, since it reduces it down to
     # just one representative sample for every unique element
     words = word_tokenize(document)
     features = {}
-    # says that for every word in the list of word features (the words we care about)
+    # for every word in the list of word features (the words we care about)
     # the key in the features dictionary must be equal to boolean value of w in words
     # if the word in the dictionary is in the set of document (is within the document at all)
     # a True value is returned
